@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">insdemo</string>
+    <string name="client_id">634327337246696</string>
+    <string name="redirect_url">https://instagram.com/</string>
+    <string name="base_url">https://api.instagram.com/</string>
+    <string name="get_user_info_url">https://api.instagram.com/v1/users/self/?access_token=</string>
+
+    <string name="instagram_app_secret">e19e5d5fd30172deb810861db075683e</string>
+    <string name="instagram_app_id">1341962886137178</string>
+    <!-- <string name="instagram_redirect_url_with_encode">https%3A%2F%2Fwww.techumiya.com%2F</string>-->
+    <string name="instagram_redirect_url_with_encode">https%3A%2F%2Fwww.google.com%2F</string>
+    <!-- <string name="instagram_redirect_url">https://www.techumiya.com/</string>-->
+    <string name="instagram_redirect_url">https://www.google.com/</string>
+</resources>
