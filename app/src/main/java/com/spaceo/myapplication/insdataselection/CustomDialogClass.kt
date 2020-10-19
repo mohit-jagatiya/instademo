@@ -13,10 +13,7 @@ import com.spaceo.myapplication.R
 import kotlinx.android.synthetic.main.custom_dialog.*
 
 
-class CustomDialogClass(
-        context: Context,
-        callBackUrlResponseListener: CallBackUrlResponseListener
-) : Dialog(context) {
+class CustomDialogClass(context: Context, callBackUrlResponseListener: CallBackUrlResponseListener) : Dialog(context) {
 
     init {
         setCancelable(true)
@@ -26,40 +23,25 @@ class CustomDialogClass(
     private val redirectUrl = context.getString(R.string.instagram_redirect_url_with_encode)
 
     /**Replace your instagram app id and redirect url*/
-    val url =
-            "https://api.instagram.com/oauth/authorize?app_id=$appID&redirect_uri=$redirectUrl&scope=user_profile,user_media&response_type=code"
+    val url = "https://api.instagram.com/oauth/authorize?app_id=$appID&redirect_uri=$redirectUrl&scope=user_profile,user_media&response_type=code"
 
     val callBackUrlResponse = callBackUrlResponseListener
 
-    //  private val redirectedUrl = "https://www.techumiya.com/?code="//Replace with your redirected url
-    private val redirectedUrl = "https://www.google.com/?code="//Replace with your redirected url
-
+    //  private val redirectedUrl = "https://www.techumiya.com/?code="
+    // Replace with your redirected url
+    private val redirectedUrl = "https://www.google.com/?code="
+    //Replace with your redirected url
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.custom_dialog)
-
-
         attachListener()
         webView.settings.javaScriptEnabled = true
-
         webView.loadUrl(url)
-
-
     }
-
-    private fun getScale(): Int {
-        val display = (context.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay
-        val width = display.width
-        val d = width / 360
-        val value = d * 100.0
-        return value.toInt()
-    }
-
 
     private fun attachListener() {
-
         /*listener for webView*/
         webView.webViewClient = object : WebViewClient() {
 
@@ -76,16 +58,11 @@ class CustomDialogClass(
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-
-
             }
-
-
         }
     }
 
     fun getAuthCodeFromRedirectedUrl(url: String): String {
-
         return url.replace(redirectedUrl, "").replace("#_", "")
     }
 

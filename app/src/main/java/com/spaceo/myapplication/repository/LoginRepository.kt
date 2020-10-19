@@ -17,13 +17,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginRepository {
-    /*private var mInstagramAlbumCallBack: InstagramAlbumCallBack? = null
-
-    interface InstagramAlbumCallBack {
-        fun onResponse(data: InstagramAccesTokenModel)
-        fun onGetDetails(response: Response<MediaResponse>?, userID: String, accessToken: String) {}
-        fun onError(exception: ResponseBody?) {}
-    }*/
 
     fun getInstaramUserIDAndAccessToken(appID: String, appSecret: String, grantType: String, redirectUri: String, code: String):MutableLiveData<Any> {
         val data = MutableLiveData<Any>()

@@ -43,9 +43,9 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() , Custom
             is Resource.Success<*> -> {
                 if (it.data is InstagramAccesTokenModel)
                      viewModel.getData(it.data)
-                else{
+                else if (it.data is InstagramUserDetailsModel) {
                     Log.e("data",it.data.toString())
-                     val data = it.data as InstagramUserDetailsModel
+                     val data = it.data
                     binding.info.text = "id  ${data.id} name  ${data.username}"
                 }
             }
