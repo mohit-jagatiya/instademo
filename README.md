@@ -125,11 +125,11 @@ Instagram Graph API
 
 The Instagram Graph API use with Instagram Businesses and Creators account with it your app can manage their Account,with Api you can get Instagram  comment,hashtag, photo, video, story, or album and Facebook Page. if you intented to need full control over your account like followers_count,follows_count,recently_searched_hashtags User has been @mentioned in Comments then use Instagram Graph API and if you just need basic profile information, photos, and videos you must use Instagram Basic Display API.
 
-how create your Businesses account
+how create your Instagram Businesses account
 
 https://www.facebook.com/help/502981923235522
 
-how create your Creators account
+how create your Instagram Creators account
 
 https://www.facebook.com/help/instagram/2358103564437429
 
