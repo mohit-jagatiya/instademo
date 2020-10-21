@@ -96,6 +96,11 @@ CustomDialogClass
         }
     }
 
+Configure Instagram Basic Display
+
+Click Products, locate the Instagram Basic Display product, and click Set Up to add it to your app.
+
+
 
 impliment CustomDialogClass.CallBackUrlResponseListener in your activity
 
@@ -116,7 +121,13 @@ fields in comma saprated value as "id,username"
 
 with collback display username
 
+get media from instagram   'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
 
+
+
+Reference
+
+https://developers.facebook.com/docs/instagram-basic-display-api/reference
 
 
 
