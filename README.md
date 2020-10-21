@@ -31,15 +31,9 @@ define insta app id and secrate in string file
 *create a custom web dilog
 
     private lateinit var customDialogClass: CustomDialogClass
-
-    coll{
-         customDialogClass = CustomDialogClass(this, this)
-                    customDialogClass.show()
-                    customDialogClass.window!!.setLayout(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT)
-         }
-
+    customDialogClass = CustomDialogClass(this, this)
+    customDialogClass.show()
+    customDialogClass.window!!.setLayout(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)
 
 CustomDialogClass
 -----------------
