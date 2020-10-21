@@ -116,7 +116,9 @@ fields in comma saprated value as "id,username"
 
 with collback display username
 
-get media from instagram   'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
+get media from instagram use Api
+
+'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
 
 instagram Graph API
 -------------------
