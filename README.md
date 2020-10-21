@@ -118,7 +118,7 @@ with collback display username
 
 get media from instagram use Api
 
-'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
+'https://graph.instagram.com/<userId>?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
 
 Instagram Graph API
 -------------------
