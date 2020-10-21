@@ -100,9 +100,7 @@ Configure Instagram Basic Display
 
 Click Products, locate the Instagram Basic Display product, and click Set Up to add it to your app.
 
-
-
-impliment CustomDialogClass.CallBackUrlResponseListener in your activity
+    impliment CustomDialogClass.CallBackUrlResponseListener in your activity
 
 make a api Coll with it respons https://api.instagram.com/ param as follow for userId and AccesToken
 
@@ -122,6 +120,15 @@ fields in comma saprated value as "id,username"
 with collback display username
 
 get media from instagram   'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
+
+#Instagram Graph API
+
+The Instagram Graph API allows Instagram Professionals — Businesses and Creators — to use your app to manage their presence on Instagram. The API can be used to get their media, manage and reply to comments on their media, identify media where they have been @mentioned by other Instagram users, find hashtagged media, and get basic metadata and metrics about other Instagram Businesses and Creators.
+
+The API is intended for Instagram Businesses and Creators who need insight into, and full control over, all of their social media interactions. If you are building an app for consumers or you only need to get an app user's basic profile information, photos, and videos, consider the Instagram Basic Display API instead.
+
+
+
 
 
 
