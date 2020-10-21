@@ -129,6 +129,7 @@ Reference
 
 https://developers.facebook.com/docs/instagram-basic-display-api/reference
 
+https://developers.facebook.com/docs/instagram-api/reference
 
 
 
