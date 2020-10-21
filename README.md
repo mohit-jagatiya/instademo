@@ -28,7 +28,8 @@ define insta app id and secrate in string file
     <string name="instagram_redirect_url">https://www.google.com/</string>
     <string name="instagram_redirect_url_with_encode">https%3A%2F%2Fwww.google.com%2F</string>
 
-*create a custom web dilog
+create a custom web dilog
+-------------------------
 
     private lateinit var customDialogClass: CustomDialogClass
     customDialogClass = CustomDialogClass(this, this)
