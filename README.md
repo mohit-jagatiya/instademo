@@ -125,6 +125,16 @@ The Instagram Graph API allows Instagram Professionals — Businesses and Creato
 
 The API is intended for Instagram Businesses and Creators who need insight into, and full control over, all of their social media interactions. If you are building an app for consumers or you only need to get an app user's basic profile information, photos, and videos, consider the Instagram Basic Display API instead.
 
+how create your Businesses account
+
+https://www.facebook.com/help/502981923235522
+
+how create your Creators account
+
+https://www.facebook.com/help/instagram/2358103564437429
+
+with it you can get Insights of user for more https://developers.facebook.com/docs/instagram-api/reference/user
+
 Reference
 
 https://developers.facebook.com/docs/instagram-basic-display-api/reference
