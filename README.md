@@ -1,4 +1,4 @@
-# instademo
+# MVVM INSTAGRAM BASIC API DEMO
 
 **INTIGRATION STEPS**
 ----------------------
