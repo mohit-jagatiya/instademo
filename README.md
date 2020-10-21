@@ -120,12 +120,10 @@ get media from instagram use Api
 
 'https://graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJ...'
 
-instagram Graph API
+Instagram Graph API
 -------------------
 
-The Instagram Graph API allows Instagram Professionals — Businesses and Creators — to use your app to manage their presence on Instagram. The API can be used to get their media, manage and reply to comments on their media, identify media where they have been @mentioned by other Instagram users, find hashtagged media, and get basic metadata and metrics about other Instagram Businesses and Creators.
-
-The API is intended for Instagram Businesses and Creators who need insight into, and full control over, all of their social media interactions. If you are building an app for consumers or you only need to get an app user's basic profile information, photos, and videos, consider the Instagram Basic Display API instead.
+The Instagram Graph API use with Instagram Businesses and Creators account with it your app can manage their Account,with Api you can get Instagram  comment,hashtag, photo, video, story, or album and Facebook Page. if you intented to need full control over your account like followers_count,follows_count,recently_searched_hashtags User has been @mentioned in Comments then use Instagram Graph API and if you just need basic profile information, photos, and videos you must use Instagram Basic Display API.
 
 how create your Businesses account
 
