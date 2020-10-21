@@ -20,7 +20,7 @@ Navigate to Roles > Roles and scroll down to the Instagram Testers section.Click
 
 Open a new web browser and go to www.instagram.com and sign into your Instagram account that you just invited. Navigate to (Profile Icon) > Edit Profile > Apps and Websites > Tester Invites and accept the invitation.
 
-define insta app id and secrate in string file
+Define Instagram app id and secrate in string file
 -----------------------------------------------
 
     <string name="instagram_app_id">app_id</string>
@@ -28,7 +28,7 @@ define insta app id and secrate in string file
     <string name="instagram_redirect_url">https://www.google.com/</string>
     <string name="instagram_redirect_url_with_encode">https%3A%2F%2Fwww.google.com%2F</string>
 
-create a custom web dilog
+Create a custom web dialog
 -------------------------
 
     private lateinit var customDialogClass: CustomDialogClass
@@ -97,13 +97,9 @@ CustomDialogClass
         }
     }
 
-Configure Instagram Basic Display
-
-Click Products, locate the Instagram Basic Display product, and click Set Up to add it to your app.
+make a api Coll with it respons https://api.instagram.com/ param as follow for userId and AccesToken
 
     impliment CustomDialogClass.CallBackUrlResponseListener in your activity
-
-make a api Coll with it respons https://api.instagram.com/ param as follow for userId and AccesToken
 
     val appID = getString(R.string.instagram_app_id)
     val appSecret = getString(R.string.instagram_app_secret)
@@ -128,11 +124,6 @@ instagram Graph API
 The Instagram Graph API allows Instagram Professionals — Businesses and Creators — to use your app to manage their presence on Instagram. The API can be used to get their media, manage and reply to comments on their media, identify media where they have been @mentioned by other Instagram users, find hashtagged media, and get basic metadata and metrics about other Instagram Businesses and Creators.
 
 The API is intended for Instagram Businesses and Creators who need insight into, and full control over, all of their social media interactions. If you are building an app for consumers or you only need to get an app user's basic profile information, photos, and videos, consider the Instagram Basic Display API instead.
-
-
-
-
-
 
 Reference
 
