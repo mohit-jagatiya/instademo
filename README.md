@@ -16,9 +16,9 @@ Click Products, locate the Instagram Basic Display product, and click Set Up to 
 Add an Instagram Test User
 --------------------------
 
-*Navigate to Roles > Roles and scroll down to the Instagram Testers section.Click Add Instagram Testers and enter your Instagram account’s username and send the invitation.
+Navigate to Roles > Roles and scroll down to the Instagram Testers section.Click Add Instagram Testers and enter your Instagram account’s username and send the invitation.
 
-*Open a new web browser and go to www.instagram.com and sign into your Instagram account that you just invited. Navigate to (Profile Icon) > Edit Profile > Apps and Websites > Tester Invites and accept the invitation.
+Open a new web browser and go to www.instagram.com and sign into your Instagram account that you just invited. Navigate to (Profile Icon) > Edit Profile > Apps and Websites > Tester Invites and accept the invitation.
 
 define insta app id and secrate in string file
 -----------------------------------------------
@@ -103,9 +103,9 @@ CustomDialogClass
     }
 
 
-*impliment CustomDialogClass.CallBackUrlResponseListener in your activity
+impliment CustomDialogClass.CallBackUrlResponseListener in your activity
 
-*make a api Coll with it respons https://api.instagram.com/ param as follow for userId and AccesToken
+make a api Coll with it respons https://api.instagram.com/ param as follow for userId and AccesToken
 
     val appID = getString(R.string.instagram_app_id)
     val appSecret = getString(R.string.instagram_app_secret)
@@ -114,13 +114,13 @@ CustomDialogClass
 
     viewModel.login(appID, appSecret, grantType, redirectUrl, response)
 
-*now coll a api https://graph.instagram.com/ with userId and AccesToken for UserDetails
+now coll a api https://graph.instagram.com/ with userId and AccesToken for UserDetails
 
     viewModel.getData(it.data)
 
-*fields in comma saprated value as "id,username"
+fields in comma saprated value as "id,username"
 
-*with collback display username
+with collback display username
 
 
 
