@@ -51,3 +51,6 @@ const val IMAGE_URL = "image_url"
 const val BASE_URL_INSTAGRAM_FOR_ACCESS_TOKEN = "https://api.instagram.com/"
 const val BASE_URL_INSTAGRAM_FOR_USER_DETAILS = "https://graph.instagram.com/"
 const val AUTHORIZATION_CODE = "authorization_code"
+
+const val VIEW_TYPE_ITEM: Int = 0
+const val VIEW_TYPE_LOADING: Int = 1

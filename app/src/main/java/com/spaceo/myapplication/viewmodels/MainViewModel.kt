@@ -15,9 +15,12 @@ class MainViewModel(application: Application, val repository: LoginRepository) :
         status.addSource(repository.getInstaramUserIDAndAccessToken(  appID, appSecret, grantType, redirectUri, code)) {
         status.value = it
     }
-     fun getData(data: InstagramAccesTokenModel) = status.addSource(repository.getUserDetailsFromInstagram(data.user_id.toString(),data.access_token)){
+    fun getData(data: InstagramAccesTokenModel) = status.addSource(repository.getUserDetailsFromInstagram(data.user_id.toString(),data.access_token)){
          status.value = it
-     }
+    }
+    fun getMedia(data: InstagramAccesTokenModel, after: String?) = status.addSource(repository.getMediaId(data.user_id.toString(),data.access_token,after)){
+         status.value = it
+    }
 
 
 }

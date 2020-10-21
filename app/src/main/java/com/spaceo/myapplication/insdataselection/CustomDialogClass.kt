@@ -5,10 +5,9 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.Window
-import android.view.WindowManager
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.geekmeets.utils.gone
+import com.spaceo.myapplication.utils.gone
 import com.spaceo.myapplication.R
 import kotlinx.android.synthetic.main.custom_dialog.*
 

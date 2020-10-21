@@ -12,6 +12,7 @@ import com.spaceo.myapplication.utils.BASE_URL_INSTAGRAM_FOR_USER_DETAILS
 //import com.spaceo.myapplication.webservice.api.AuthenticationApi
 //import com.spaceo.myapplication.webservice.api.UserMasterResponse
 import com.spaceo.myapplication.factory.Resource
+import com.spaceo.myapplication.insdataselection.model.MediaResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -51,7 +52,7 @@ class LoginRepository {
 
         val data = MutableLiveData<Any>()
 
-        RestClient.retrofitClient(BASE_URL_INSTAGRAM_FOR_USER_DETAILS).getUserDetailsFromInstagram(userID, "id,username,profile_picture", accessToken).enqueue(object : Callback<InstagramUserDetailsModel> {
+        RestClient.retrofitClient(BASE_URL_INSTAGRAM_FOR_USER_DETAILS).getUserDetailsFromInstagram(userID, "id,username,name", accessToken).enqueue(object : Callback<InstagramUserDetailsModel> {
             override fun onFailure(call: Call<InstagramUserDetailsModel>?, t: Throwable?) {
                 data.value = Resource.Error<String>(t!!.message.toString())
             }
@@ -60,6 +61,7 @@ class LoginRepository {
 
                 if (response!!.isSuccessful) {
                     data.value = Resource.Success(response.body()!!)
+                    Log.e("respons", response.body()!!.toString())
 
                 } else {
                     data.value = Resource.Error<String>(
@@ -71,6 +73,37 @@ class LoginRepository {
 
         return data
 
+    }
+    /*getting media from instagram*/
+    fun getMediaId(userID: String, accessToken: String,after:String?): MutableLiveData<Any> {
+
+        val accessCode = MutableLiveData<Any>()
+
+        RestClient.retrofitClient(BASE_URL_INSTAGRAM_FOR_USER_DETAILS).getMediaId(
+            userID,
+            "id,caption,media_url,media_type,permalink,children{media_url}",
+            accessToken,after = after
+        ).enqueue(object : Callback<MediaResponse> {
+            override fun onFailure(call: Call<MediaResponse>?, t: Throwable?) {
+                // accessCode.value = Resource.Error<String>(t!!.message.toString())
+            }
+
+            override fun onResponse(
+                call: Call<MediaResponse>?,
+                response: Response<MediaResponse>?
+            ) {
+                Log.d("TAG","getMedia")
+                if (response!!.isSuccessful) {
+
+                    accessCode.value = Resource.Success(response.body())
+
+                } else {
+                    accessCode.value = Resource.Error<String>(Gson().toJson(response.errorBody()))
+                }
+            }
+        })
+
+        return accessCode
     }
 
 }

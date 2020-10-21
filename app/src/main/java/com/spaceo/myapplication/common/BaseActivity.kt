@@ -24,20 +24,26 @@
 package com.spaceo.myapplication.common
 
 import android.app.Activity
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.Matrix
+import android.graphics.drawable.ColorDrawable
 import android.media.ExifInterface
 import android.os.Build
 import android.os.Bundle
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
+import com.spaceo.myapplication.R
 import com.spaceo.myapplication.utils.PreferenceHelper.customPrefs
 import com.spaceo.myapplication.utils.COMMON_REQ_CODE
 import com.spaceo.myapplication.factory.ViewModelProviderFactory
@@ -198,7 +204,34 @@ abstract class BaseActivity<V : BaseViewModel, B : ViewDataBinding> : AppCompatA
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        hideProgressDialog()
+    }
 
+    private var mProgressDialog: Dialog? = null
+
+    fun showProgressDialog(context: Context) {
+        hideProgressDialog()
+        mProgressDialog = Dialog(context)
+        mProgressDialog?.let {
+
+            it.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            it.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            it.setContentView(R.layout.dialog_load)
+            it.setCancelable(false)
+            it.show()
+        }
+    }
+
+    fun hideProgressDialog() {
+        mProgressDialog?.let {
+            if (it.isShowing) {
+                it.dismiss()
+                mProgressDialog = null
+            }
+        }
+    }
 
 
 }

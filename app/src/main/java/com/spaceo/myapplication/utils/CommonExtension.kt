@@ -1,4 +1,4 @@
-package com.geekmeets.utils
+package com.spaceo.myapplication.utils
 
 import android.app.Activity
 import android.content.Context
@@ -19,7 +19,6 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
-import com.spaceo.myapplication.utils.SUCCESS
 
 
 /**

@@ -2,6 +2,7 @@ package com.spaceo.myapplication.insdataselection.network
 
 import com.spaceo.myapplication.insdataselection.model.InstagramAccesTokenModel
 import com.spaceo.myapplication.insdataselection.model.InstagramUserDetailsModel
+import com.spaceo.myapplication.insdataselection.model.MediaResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -26,5 +27,24 @@ interface ApiEndPoint {
         @Query("fields") fields: String,
         @Query("access_token") accessToken: String
     ): Call<InstagramUserDetailsModel>
+
+    /*media using media id*/
+    @GET("{media-id}")
+    fun getMedia(
+        @Path("media-id") mediaId: String,
+        @Query("fields") fields: String,
+        @Query("access_token") accessToken: String
+    ): Call<MediaResponse>
+
+
+    /*all media using userid*/
+    @GET("{user-id}/media")
+    fun getMediaId(
+        @Path("user-id") userId: String,
+        @Query("fields") fields: String,
+        @Query("access_token") accessToken: String,
+        @Query("after") after:String?
+
+    ): Call<MediaResponse>
 
 }
